@@ -21,7 +21,7 @@ dependencies {
     // 添加 Spring Security OAuth2 客户端依赖
 //    implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
     // 添加 Spring Security 依赖，用于安全配置
-//    implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-security")
     // 添加JUnit 5依赖，用于编写单元测试
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     // 添加JUnit 5引擎依赖
