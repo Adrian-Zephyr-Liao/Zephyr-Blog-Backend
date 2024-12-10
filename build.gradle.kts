@@ -1,6 +1,6 @@
 plugins {
-    id("org.springframework.boot") version "2.7.5" // 使用最新版本的Spring Boot
-    id("io.spring.dependency-management") version "1.0.15.RELEASE" // 管理依赖版本
+    id("org.springframework.boot") version "3.4.0" // 使用最新版本的Spring Boot
+    id("io.spring.dependency-management") version "1.1.6" // 管理依赖版本
     id("java")
 }
 
@@ -14,20 +14,28 @@ repositories {
 dependencies {
     // 添加Spring Boot Starter Web依赖，用于构建Web应用程序
     implementation("org.springframework.boot:spring-boot-starter-web")
-    // Spring Data JPA 依赖，用于数据库操作
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    // 用于密码加密（BCrypt 等算法），添加 Spring Security Crypto 模块依赖
-    implementation("org.springframework.security:spring-security-crypto")
-    // 添加 Spring Security OAuth2 客户端依赖
-//    implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
     // 添加 Spring Security 依赖，用于安全配置
     implementation("org.springframework.boot:spring-boot-starter-security")
+    // 用于密码加密（BCrypt 等算法），添加 Spring Security Crypto 模块依赖
+    implementation("org.springframework.security:spring-security-crypto:6.4.1")
+    // 添加 Spring Security OAuth2 客户端依赖
+//    implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
     // 添加JUnit 5依赖，用于编写单元测试
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     // 添加JUnit 5引擎依赖
     testImplementation("org.junit.jupiter:junit-jupiter")
     // MySQL 驱动依赖，用于连接MySQL数据库
     runtimeOnly("com.mysql:mysql-connector-j")
+    // 添加 jsonwebtoken 依赖，用于生成和验证 JSON Web Tokens
+    implementation("io.jsonwebtoken:jjwt-api:0.11.5")
+    // 添加 jsonwebtoken 实现依赖
+    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
+    // 添加 jsonwebtoken 依赖，用于与 Jackson 库集成
+    runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
+    // 添加 MyBatis-Plus 依赖，简化 MyBatis 开发
+    implementation("com.baomidou:mybatis-plus-spring-boot3-starter:3.5.9")
+    // 添加 Lombok 依赖，简化 Java 开发
+    implementation("org.projectlombok:lombok:1.18.24")
 }
 
 tasks.test {
