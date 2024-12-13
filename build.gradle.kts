@@ -1,6 +1,7 @@
 plugins {
     id("org.springframework.boot") version "3.4.0" // 使用最新版本的Spring Boot
     id("io.spring.dependency-management") version "1.1.6" // 管理依赖版本
+    id("io.freefair.lombok") version "8.11" // 使用lombok
     id("java")
 }
 
@@ -34,8 +35,6 @@ dependencies {
     runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
     // 添加 MyBatis-Plus 依赖，简化 MyBatis 开发
     implementation("com.baomidou:mybatis-plus-spring-boot3-starter:3.5.9")
-    // 添加 Lombok 依赖，简化 Java 开发
-    implementation("org.projectlombok:lombok:1.18.24")
 }
 
 tasks.test {

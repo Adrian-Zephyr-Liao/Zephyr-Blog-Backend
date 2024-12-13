@@ -20,7 +20,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         this.userMapper = userMapper;
     }
 
-    @Override
     public boolean login(String email, String password) {
         User user = userMapper.findByEmail(email);
         if (user != null) {
@@ -30,7 +29,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return false;
     }
 
-    @Override
     public User register(User user) {
         // 检查邮箱是否已存在
 //        User existingEmail = userMapper.findByEmail(user.getEmail());

@@ -5,6 +5,7 @@ import com.zephyr.model.entity.User;
 import com.zephyr.model.response.ApiResponse;
 import com.zephyr.model.response.ErrorResponse;
 import com.zephyr.service.intf.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ public class AuthController {
 
     private final UserService userService;
 
+    @Autowired
     public AuthController(UserService userService) {
         this.userService = userService;
     }
