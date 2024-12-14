@@ -1,5 +1,8 @@
 package com.zephyr.constant;
 
+import lombok.Getter;
+
+@Getter
 public enum ErrorCodes {
     AUTH_001("Invalid username or password"),
     AUTH_002("User registration failed"),
@@ -11,7 +14,4 @@ public enum ErrorCodes {
         this.message = message;
     }
 
-    public String getMessage() {
-        return message;
-    }
 }

@@ -35,6 +35,8 @@ dependencies {
     runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
     // 添加 MyBatis-Plus 依赖，简化 MyBatis 开发
     implementation("com.baomidou:mybatis-plus-spring-boot3-starter:3.5.9")
+    // 添加日志依赖，用于记录应用程序日志
+    implementation("org.slf4j:slf4j-api:2.0.16")
 }
 
 tasks.test {
