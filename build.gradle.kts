@@ -17,6 +17,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     // 添加 Spring Security 依赖，用于安全配置
     implementation("org.springframework.boot:spring-boot-starter-security")
+    // 开发时，使用热部署工具，添加 Spring Boot DevTools
+    compileOnly("org.springframework.boot:spring-boot-devtools")
     // 用于密码加密（BCrypt 等算法），添加 Spring Security Crypto 模块依赖
     implementation("org.springframework.security:spring-security-crypto:6.4.1")
     // 添加 Spring Security OAuth2 客户端依赖
